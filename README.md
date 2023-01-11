@@ -1,2 +1,2 @@
-# Pathfinder
+# Pathfinding Puzzle Game
  
