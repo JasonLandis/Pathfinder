@@ -1,40 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using System.Linq;
+
+// Controls cursor icon and reveals overlay tile when clicked on
 
 public class MouseController : MonoBehaviour
 {
-    void LateUpdate()
+    public GameObject cursor; // The cursor icon
+
+    private void Update()
     {
-        var focusedTileHit = GetFocusedOnTile(); // gets the tile the mouse is hovering over
+        RaycastHit2D? hit = GetFocusedOnTile(); // Get the tile the cursor is focused on
 
-        if (focusedTileHit.HasValue) // if the mouse is hovering over a tile
+        if (hit.HasValue)
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // shows the cursor tile
-            GameObject overlayTile = focusedTileHit.Value.collider.gameObject; // gets the tile the mouse is hovering over
-            transform.position = overlayTile.transform.position; // moves the overlay tile to the tile the mouse is hovering over
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = overlayTile.GetComponent<SpriteRenderer>().sortingOrder;
-
-            if (Input.GetMouseButtonDown(0)) // if left mouse button is clicked
-            {
-                overlayTile.GetComponent<OverlayTile>().ShowTile(); // shows the tile
-            }
-        } else
+            cursor.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Show the cursor
+            OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>(); // If the cursor is focused on a tile, show the cursor icon and reveal the tile
+            cursor.transform.position = tile.transform.position; // Set the position of the cursor icon to the position of the tile
+            cursor.GetComponent<SpriteRenderer>().sortingOrder = tile.transform.GetComponent<SpriteRenderer>().sortingOrder;            
+        }
+        else
         {
-            GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0); // hides the cursor tile
+            cursor.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0); // Hide the cursor
         }
     }
-
-    public RaycastHit2D? GetFocusedOnTile() // gets the tile that the mouse is currently over
+    
+    private static RaycastHit2D? GetFocusedOnTile()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // gets the mouse position
-        Vector2 mousePos2D = new(mousePos.x, mousePos.y); // converts the mouse position to a 2D vector
-        RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2D, Vector2.zero); // gets all the tiles that the mouse is over
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // Get the mouse position
+        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); // Convert the mouse position to a Vector2
 
-        if (hits.Length > 0) // if there are tiles that the mouse is over
+        RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2D, Vector2.zero); // Get all the tiles the mouse is focused on
+
+        if (hits.Length > 0)
         {
-            return hits.OrderByDescending(i => i.collider.transform.position.z).First(); // returns the tile that is closest to the camera
+            return hits.OrderByDescending(i => i.collider.transform.position.z).First(); // Return the tile with the highest z index
         }
 
         return null;
