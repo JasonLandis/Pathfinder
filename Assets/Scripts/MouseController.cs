@@ -16,7 +16,21 @@ public class MouseController : MonoBehaviour
             cursor.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Show the cursor
             OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>(); // If the cursor is focused on a tile, show the cursor icon and reveal the tile
             cursor.transform.position = tile.transform.position; // Set the position of the cursor icon to the position of the tile
-            cursor.GetComponent<SpriteRenderer>().sortingOrder = tile.transform.GetComponent<SpriteRenderer>().sortingOrder;            
+            cursor.GetComponent<SpriteRenderer>().sortingOrder = tile.transform.GetComponent<SpriteRenderer>().sortingOrder;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (tile.isBlocked)
+                {
+                    tile.HideTile(); // Hide the tile
+                    tile.isBlocked = false; // Set the tile to not be blocked
+                }
+                else
+                {
+                    tile.ShowTile(); // Show the tile
+                    tile.isBlocked = true; // Set the tile to be blocked
+                }                
+            }
         }
         else
         {

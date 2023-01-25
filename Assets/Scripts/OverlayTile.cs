@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 // Properties for each overlay tile generated on the map
 
@@ -23,5 +24,4 @@ public class OverlayTile : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0); // Hide the overlay tile
     }
-
 }
