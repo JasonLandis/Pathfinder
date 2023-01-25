@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 // This class is used to generate overlay tiles on the map when the game starts
+// It also collects the start and end tiles on the map
 
 public class MapManager : MonoBehaviour
 {
@@ -85,6 +86,6 @@ public class MapManager : MonoBehaviour
         }
         startOverlayTile = map[new Vector2Int(startTileLocation.x, startTileLocation.y)]; // Set the start overlay tile
         endOverlayTile = map[new Vector2Int(endTileLocation.x, endTileLocation.y)]; // Set the end overlay tile
-        character.GetComponent<CharacterInfo>().standingOnTile = startOverlayTile; // Set the character's standing on tile to the start tile
+        character.GetComponent<CharacterManager>().standingOnTile = startOverlayTile; // Set the character's standing on tile to the start tile
     }
 }
