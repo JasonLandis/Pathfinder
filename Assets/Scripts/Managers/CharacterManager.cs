@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public OverlayTile standingOnTile; // the tile the player is currently standing on
+    public OverlayTile standingOnTile; // the tile the player is currently standing on    
 }

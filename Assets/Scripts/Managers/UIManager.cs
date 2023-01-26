@@ -6,22 +6,27 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public static bool isRunning; // Has the play button been pressed
+    public GameObject endScreen; // The end screen
     public TextMeshProUGUI tilesPressText; // The text for the tiles pressed button
     public TextMeshProUGUI timerText; // The text for the timer button
+    public TextMeshProUGUI endScreenText; // The text for the end screen
 
     private void Start()
     {
-        isRunning = false; // Set the play pressed to false
+        // Initializes variables
+        isRunning = false;
     }
 
     private void Update()
     {
-        tilesPressText.text = "Tiles Remaining: " + LevelManager.tilesRemaining; // Set the text for the tiles pressed button
-        timerText.text = "" + string.Format("{0:00.00}", LevelManager.staticTimer); // Set the text for the timer button
+        // Update the text for the tiles pressed button and the timer button
+        tilesPressText.text = "Tiles Remaining: " + LevelManager.tilesRemaining;
+        timerText.text = "" + string.Format("{0:00.00}", LevelManager.staticTimer);
     }
 
-    public void Play()
+    public void StartLevel()
     {
-        isRunning = true; // Set the play pressed to true
+        // When the play button is pressed, start the level
+        isRunning = true;
     }
 }
