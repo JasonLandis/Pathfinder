@@ -104,7 +104,9 @@ MonoBehaviour:
   Previous: {fileID: 0}
   gridLocation: {x: 0, y: 0, z: 0}
   wallSprite: {fileID: -1841099591, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  previewWall: {fileID: -1815635822, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
   pathSprite: {fileID: 1421361859, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  previewPath: {fileID: 1510641064, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
 --- !u!60 &5679887963837584576
 PolygonCollider2D:
   m_ObjectHideFlags: 0

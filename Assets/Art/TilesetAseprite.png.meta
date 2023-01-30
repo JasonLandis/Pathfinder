@@ -524,6 +524,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TilesetAseprite_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1775f516d5e4ca041995fefafa4ad4c7
+      internalID: -1815635822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetAseprite_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 352
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c419de64d7b71124e93045affb57300a
+      internalID: 1510641064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -539,6 +581,7 @@ TextureImporter:
       TilesetAseprite_5: 1008979715
       TilesetAseprite_2: -1054775250
       TilesetAseprite_8: 73486280
+      TilesetAseprite_20: -523284780
       TilesetAseprite_10: -681731409
       TilesetAseprite_0: 664904555
       TilesetAseprite_4: -961082158
@@ -554,6 +597,7 @@ TextureImporter:
       TilesetAseprite_12: 1343680518
       TilesetAseprite_9: -979660201
       TilesetAseprite_19: -1841099591
+      TilesetAseprite_21: 1510641064
       TilesetAseprite_16: -1510607005
   spritePackingTag: 
   pSDRemoveMatte: 0

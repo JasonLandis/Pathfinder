@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.72156864}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -618,7 +618,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1182.3674, y: 414.1535}
+  m_SizeDelta: {x: 975.3479, y: 244.4655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &960433374
 MonoBehaviour:
@@ -673,9 +673,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1077,8 +1077,9 @@ GameObject:
   - component: {fileID: 1763731540}
   - component: {fileID: 1763731539}
   - component: {fileID: 1763731541}
+  - component: {fileID: 1763731542}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,6 +1135,30 @@ MonoBehaviour:
   startTileLocation: {x: 0, y: 0, z: 0}
   endTileLocation: {x: 0, y: 0, z: 0}
   ignoreBottomTiles: 0
+--- !u!114 &1763731542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763731538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa89f51045045dd49a83803e6ae874e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfCharacter: 2.5
+  timer: 20
+  tilesCanPress: 3
+  isRunning: 0
+  succeeded: 0
+  endScreenActive: 0
+  cursor: {fileID: 1256403273}
+  cursorSprite: {fileID: -1510607005, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  wallSprite: {fileID: -1841099591, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  previewWall: {fileID: -1815635822, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  pathSprite: {fileID: 1421361859, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  previewPath: {fileID: 1510641064, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
 --- !u!1 &1765957592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilesPressText: {fileID: 1213345514}
   timerText: {fileID: 91671438}
+  endScreen: {fileID: 2070410879}
+  endScreenText: {fileID: 960433374}
 --- !u!1 &1984924345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,7 +2742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_BlockingObjects: 3
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2759,7 +2786,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2792,38 +2819,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: timer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: cursor
-      value: 
-      objectReference: {fileID: 1256403273}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: tilesCanPress
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 983236692391359312, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
-      propertyPath: speedOfCharacter
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 983236692391359317, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
       propertyPath: m_Name
       value: Cursor
       objectReference: {fileID: 0}
+    - target: {fileID: 983236692391359318, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1815635822, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
     - target: {fileID: 983236692391359318, guid: 64c282b09b5fcb14687a5551f2a72f40, type: 3}
       propertyPath: m_Color.a
       value: 0

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 983236692391359319}
   - component: {fileID: 983236692391359318}
-  - component: {fileID: 983236692391359312}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -85,20 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &983236692391359312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983236692391359317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa89f51045045dd49a83803e6ae874e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedOfCharacter: 0
-  timer: 0
-  cursor: {fileID: 983236692391359317}
-  tilesCanPress: 0
-  tilesPressed: 0
