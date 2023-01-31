@@ -133,8 +133,8 @@ TextureImporter:
         y: 480
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,8 +154,8 @@ TextureImporter:
         y: 480
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,12 +192,12 @@ TextureImporter:
       name: TilesetAseprite_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 480
+        x: 0
+        y: 448
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: TilesetAseprite_5
       rect:
         serializedVersion: 2
-        x: 160
-        y: 480
+        x: 32
+        y: 448
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,12 +234,12 @@ TextureImporter:
       name: TilesetAseprite_6
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 448
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -255,12 +255,12 @@ TextureImporter:
       name: TilesetAseprite_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 96
         y: 448
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,12 +276,12 @@ TextureImporter:
       name: TilesetAseprite_8
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 448
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: TilesetAseprite_9
       rect:
         serializedVersion: 2
-        x: 96
-        y: 448
+        x: 0
+        y: 416
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,8 +318,8 @@ TextureImporter:
       name: TilesetAseprite_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 448
+        x: 32
+        y: 416
         width: 32
         height: 32
       alignment: 9
@@ -339,12 +339,12 @@ TextureImporter:
       name: TilesetAseprite_11
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 416
         width: 32
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -360,12 +360,12 @@ TextureImporter:
       name: TilesetAseprite_12
       rect:
         serializedVersion: 2
-        x: 32
-        y: 416
+        x: 0
+        y: 384
         width: 32
         height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.75}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -381,8 +381,8 @@ TextureImporter:
       name: TilesetAseprite_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 416
+        x: 32
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -399,169 +399,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TilesetAseprite_14
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8790f917fed0614c826487a80fc7a36
-      internalID: -1145416052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TilesetAseprite_15
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 432
-        width: 32
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.499}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67a3f41509f7823458a3764c085eb435
-      internalID: 445310455
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_16
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 432
-        width: 32
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4995}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22dccdc38e3e4bf44985e95b5c840a10
-      internalID: -1510607005
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_17
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fb502cb525d5a34bb273163231d47a9
-      internalID: 1729663436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_18
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0094221e7a18fb740ad1fce7cde4ba2f
-      internalID: 1421361859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_19
       rect:
         serializedVersion: 2
         x: 64
         y: 384
         width: 32
         height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c035f65a16873544c8e4f5b38e597151
-      internalID: -1841099591
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_20
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 384
-        width: 32
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0.25}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1775f516d5e4ca041995fefafa4ad4c7
-      internalID: -1815635822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TilesetAseprite_21
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 352
-        width: 32
-        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c419de64d7b71124e93045affb57300a
-      internalID: 1510641064
+      spriteID: 79937ea5f44149341a5d03bc5745b170
+      internalID: -824348732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesetAseprite_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b979954eeb39c4d4cb1747668f092e8c
+      internalID: -1145416052
       vertices: []
       indices: 
       edges: []
@@ -581,24 +455,18 @@ TextureImporter:
       TilesetAseprite_5: 1008979715
       TilesetAseprite_2: -1054775250
       TilesetAseprite_8: 73486280
-      TilesetAseprite_20: -523284780
       TilesetAseprite_10: -681731409
       TilesetAseprite_0: 664904555
       TilesetAseprite_4: -961082158
       TilesetAseprite_1: 780477038
-      TilesetAseprite_17: 1729663436
       TilesetAseprite_13: 78734537
       TilesetAseprite_7: 1445649090
-      TilesetAseprite_15: 445310455
+      TilesetAseprite_15: -824348732
       TilesetAseprite_6: -539660436
-      TilesetAseprite_18: 1421361859
       TilesetAseprite_3: -619247423
       TilesetAseprite_14: -1145416052
       TilesetAseprite_12: 1343680518
       TilesetAseprite_9: -979660201
-      TilesetAseprite_19: -1841099591
-      TilesetAseprite_21: 1510641064
-      TilesetAseprite_16: -1510607005
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

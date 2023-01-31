@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &5679887963837584445
@@ -103,10 +103,10 @@ MonoBehaviour:
   isBlocked: 0
   Previous: {fileID: 0}
   gridLocation: {x: 0, y: 0, z: 0}
-  wallSprite: {fileID: -1841099591, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
-  previewWall: {fileID: -1815635822, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
-  pathSprite: {fileID: 1421361859, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
-  previewPath: {fileID: 1510641064, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  redWallSprite: {fileID: 1008979715, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  blueWallSprite: {fileID: -539660436, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  yellowWallSprite: {fileID: 1445649090, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
+  pathSprite: {fileID: 78734537, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
 --- !u!60 &5679887963837584576
 PolygonCollider2D:
   m_ObjectHideFlags: 0
