@@ -21,7 +21,6 @@ public class OverlayTile : MonoBehaviour
 
     public void ShowRedTile()
     {
-        // Shows the wall tile
         gameObject.GetComponent<SpriteRenderer>().sprite = redWallSprite;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -29,7 +28,6 @@ public class OverlayTile : MonoBehaviour
 
     public void ShowBlueTile()
     {
-        // Shows the wall tile
         gameObject.GetComponent<SpriteRenderer>().sprite = blueWallSprite;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -37,7 +35,6 @@ public class OverlayTile : MonoBehaviour
 
     public void ShowYellowTile()
     {
-        // Shows the wall tile
         gameObject.GetComponent<SpriteRenderer>().sprite = yellowWallSprite;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
@@ -45,7 +42,6 @@ public class OverlayTile : MonoBehaviour
 
     public void ShowPathTile()
     {
-        // Shows the white tile
         gameObject.GetComponent<SpriteRenderer>().sprite = pathSprite;
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
@@ -53,7 +49,6 @@ public class OverlayTile : MonoBehaviour
 
     public void HideTile()
     {
-        // Hides the wall tile
         gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0);
     }
 }
