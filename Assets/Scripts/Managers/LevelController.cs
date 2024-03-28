@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour
 
     [Header("Level Properties")]
     public GameObject cursor; // The cursor icon
+    public GameObject character; // The character object
     public int tilesCanPress; // The number of tiles the player can press for the specific level
     public float timer; // the timer for the character to move
     private bool isRunning = false; // Is the level running
@@ -38,6 +39,8 @@ public class LevelController : MonoBehaviour
         pathFinder = new PathFinder();
         path = new List<OverlayTile>();
         map = MapManager.Instance;
+
+        character.GetComponent<CharacterInfo>().standingOnTile = map.startOverlayTile;
     }
 
     private void Update()
@@ -50,7 +53,7 @@ public class LevelController : MonoBehaviour
         RaycastHit2D? hit = GetFocusedOnTile();
 
         // If the timer has ended or the player has reached the destination, stop time
-        if (timer <= 0 || map.character.GetComponent<CharacterInfo>().standingOnTile == map.endOverlayTile)
+        if (timer <= 0 || character.GetComponent<CharacterInfo>().standingOnTile == map.endOverlayTile)
         {
             cursor.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
             isRunning = false;
@@ -75,7 +78,7 @@ public class LevelController : MonoBehaviour
         {
             OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
             cursor.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-            cursor.transform.position = tile.transform.position; 
+            cursor.transform.position = tile.transform.position;
 
             if (tilesCanPress == 0)
             {
@@ -152,11 +155,11 @@ public class LevelController : MonoBehaviour
     private void MoveAlongPath()
     {
         // Move the character along the path
-        var step = map.character.GetComponent<CharacterInfo>().characterSpeed * Time.deltaTime;
+        var step = character.GetComponent<CharacterInfo>().characterSpeed * Time.deltaTime;
         float zIndex = path[0].transform.position.z;
-        map.character.GetComponent<CharacterInfo>().transform.position = Vector2.MoveTowards(map.character.GetComponent<CharacterInfo>().transform.position, path[0].transform.position, step);
-        map.character.GetComponent<CharacterInfo>().transform.position = new Vector3(map.character.GetComponent<CharacterInfo>().transform.position.x, map.character.GetComponent<CharacterInfo>().transform.position.y, zIndex);
-        if (Vector2.Distance(map.character.GetComponent<CharacterInfo>().transform.position, path[0].transform.position) < 0.00001f)
+        character.transform.position = Vector2.MoveTowards(character.transform.position, path[0].transform.position, step);
+        character.transform.position = new Vector3(character.transform.position.x, character.transform.position.y, zIndex);
+        if (Vector2.Distance(character.transform.position, path[0].transform.position) < 0.00001f)
         {
             // Hide the tile when the character crosses it and remove it from the path
             path[0].HideTile();
@@ -168,8 +171,8 @@ public class LevelController : MonoBehaviour
     private void PositionCharacterOnTile(OverlayTile tile)
     {
         // Position the character on the tile
-        map.character.GetComponent<CharacterInfo>().transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, tile.transform.position.z);
-        map.character.GetComponent<CharacterInfo>().standingOnTile = tile;
+        character.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, tile.transform.position.z);
+        character.GetComponent<CharacterInfo>().standingOnTile = tile;
     }
 
     private void RevealPath()
@@ -182,7 +185,7 @@ public class LevelController : MonoBehaviour
                 tile.HideTile();
             }
         }
-        path = pathFinder.FindPath(map.character.GetComponent<CharacterInfo>().standingOnTile, map.endOverlayTile);
+        path = pathFinder.FindPath(character.GetComponent<CharacterInfo>().standingOnTile, map.endOverlayTile);
         foreach (OverlayTile tile in path)
         {
             tile.ShowPathTile();

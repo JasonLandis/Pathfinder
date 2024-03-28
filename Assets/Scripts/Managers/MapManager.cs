@@ -12,7 +12,6 @@ public class MapManager : MonoBehaviour
     public static MapManager Instance { get { return _instance; } } // Public access to the instance
 
     [Header("Setup Properties")]
-    public GameObject character; // The character object
     public GameObject overlayPrefab; // Prefab for the overlay tiles
     public GameObject overlayContainer; // Container for the overlay tiles
     public TileBase startTile; // the start tile
@@ -24,7 +23,7 @@ public class MapManager : MonoBehaviour
     public Vector3Int startTileLocation; // the start tile location
     public Vector3Int endTileLocation; // the end tile location
 
-    [Header("Other")]                        
+    [Header("Other")]
     public Dictionary<Vector2Int, OverlayTile> map; // Dictionary for the overlay tiles
     public bool ignoreBottomTiles; // Ignore the bottom tiles
 
@@ -33,7 +32,7 @@ public class MapManager : MonoBehaviour
         // Initialize the instance
         if (_instance != null && _instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         else
         {
@@ -44,7 +43,7 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         // Initialize the map
-        var tileMaps = gameObject.transform.GetComponentsInChildren<Tilemap>().OrderByDescending(x => x.GetComponent<TilemapRenderer>().sortingOrder = 0);
+        var tileMaps = gameObject.transform.GetComponentsInChildren<Tilemap>();
         map = new Dictionary<Vector2Int, OverlayTile>();
         foreach (var tm in tileMaps)
         {           
@@ -53,24 +52,21 @@ public class MapManager : MonoBehaviour
                 for (int x = -7; x < 7; x++)
                 {
                     if (tm.HasTile(new Vector3Int(x, y, 0)))
-                    {                            
-                        if (!map.ContainsKey(new Vector2Int(x, y)))
-                        {                                
-                            if (tm.GetTile(new Vector3Int(x, y, 0)) == startTile)
-                            {
-                                startTileLocation = new Vector3Int(x, y, 0);                                 
-                            }
-                            else if (tm.GetTile(new Vector3Int(x, y, 0)) == endTile)
-                            {
-                                endTileLocation = new Vector3Int(x, y, 0);
-                            }
-                            var overlayTile = Instantiate(overlayPrefab, overlayContainer.transform);
-                            var cellWorldPosition = tm.GetCellCenterWorld(new Vector3Int(x, y, 0));
-                            overlayTile.transform.position = new Vector3(cellWorldPosition.x, cellWorldPosition.y, cellWorldPosition.z + 1);
-                            overlayTile.GetComponent<SpriteRenderer>().sortingOrder = tm.GetComponent<TilemapRenderer>().sortingOrder + 2;
-                            overlayTile.GetComponent<OverlayTile>().gridLocation = new Vector3Int(x, y, 0);
-                            map.Add(new Vector2Int(x, y), overlayTile.GetComponent<OverlayTile>());
+                    {
+                        if (tm.GetTile(new Vector3Int(x, y, 0)) == startTile)
+                        {
+                            startTileLocation = new Vector3Int(x, y, 0);
                         }
+                        else if (tm.GetTile(new Vector3Int(x, y, 0)) == endTile)
+                        {
+                            endTileLocation = new Vector3Int(x, y, 0);
+                        }
+                        var overlayTile = Instantiate(overlayPrefab, overlayContainer.transform);
+                        var cellWorldPosition = tm.GetCellCenterWorld(new Vector3Int(x, y, 0));
+                        overlayTile.transform.position = new Vector3(cellWorldPosition.x, cellWorldPosition.y, cellWorldPosition.z + 1);
+                        overlayTile.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                        overlayTile.GetComponent<OverlayTile>().gridLocation = new Vector3Int(x, y, 0);
+                        map.Add(new Vector2Int(x, y), overlayTile.GetComponent<OverlayTile>());
                     }
                 }
             }
@@ -78,6 +74,5 @@ public class MapManager : MonoBehaviour
         // Gets the start and end overlay tiles
         startOverlayTile = map[new Vector2Int(startTileLocation.x, startTileLocation.y)];
         endOverlayTile = map[new Vector2Int(endTileLocation.x, endTileLocation.y)];
-        character.GetComponent<CharacterInfo>().standingOnTile = startOverlayTile;
     }
 }
