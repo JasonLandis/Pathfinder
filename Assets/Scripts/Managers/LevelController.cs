@@ -7,6 +7,7 @@ using TMPro;
 // Also controls specific level settings
 
 public class LevelController : MonoBehaviour
+
 {
     [Header("UI Properties")]
     public GameObject endScreen; // The end screen

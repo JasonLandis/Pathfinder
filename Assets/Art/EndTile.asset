@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TilesetAseprite_0
+  m_Name: EndTile
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 664904555, guid: 252f82a6e1caac7418f7bb6c99036d8e, type: 3}
-  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
+  m_Color: {r: 0.3529412, g: 0.6756751, b: 0.972549, a: 1}
   m_Transform:
     e00: 1
     e01: 0

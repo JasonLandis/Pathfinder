@@ -25,7 +25,6 @@ public class MapManager : MonoBehaviour
 
     [Header("Other")]
     public Dictionary<Vector2Int, OverlayTile> map; // Dictionary for the overlay tiles
-    public bool ignoreBottomTiles; // Ignore the bottom tiles
 
     private void Awake()
     {
